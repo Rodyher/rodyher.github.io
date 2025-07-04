@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional</title>
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Fuentes (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======== HEADER ======== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"></a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">Sobre Mí</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--button">Contactar</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- ======== HERO ======== -->
+        <section class="hero container">
+            <div class="hero__content">
+                <h1 id="hero-title" class="hero__title"></h1>
+                <p id="hero-subtitle" class="hero__subtitle"></p>
+                <div id="availability-status" class="availability"></div>
+                <a href="#contact" class="button button--primary">Hablemos de tu proyecto</a>
+                <div id="hero-social" class="hero__social"></div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__image-blob"></div>
+                <!-- Puedes poner una imagen tuya aquí si quieres -->
+                <!-- <img src="path/to/your/image.png" alt="Tu Nombre"> -->
+            </div>
+        </section>
+
+        <!-- ======== ABOUT ======== -->
+        <section id="about" class="about section container">
+            <h2 id="about-title" class="section__title"></h2>
+            <div id="about-content" class="about__container"></div>
+        </section>
+
+        <!-- ======== PROJECTS ======== -->
+        <section id="projects" class="projects section container">
+            <h2 class="section__title">Casos de Éxito</h2>
+            <div id="projects-container" class="projects__container">
+                <!-- Los proyectos se cargarán aquí desde JS -->
+            </div>
+        </section>
+
+        <!-- ======== SKILLS ======== -->
+        <section id="skills" class="skills section container">
+            <h2 class="section__title">Mi Caja de Herramientas</h2>
+            <div id="skills-container" class="skills__container">
+                <!-- Las habilidades se cargarán aquí desde JS -->
+            </div>
+        </section>
+        
+        <!-- ======== PROCESS ======== -->
+        <section id="process" class="process section container">
+            <h2 class="section__title">Mi Proceso de Trabajo</h2>
+            <div id="process-container" class="process__container">
+                <!-- Los pasos del proceso se cargarán aquí -->
+            </div>
+        </section>
+
+        <!-- ======== CONTACT ======== -->
+        <section id="contact" class="contact section container">
+            <div class="contact__container">
+                <div class="contact__content">
+                    <h2 class="section__title">¿Tienes una idea?</h2>
+                    <p class="contact__description">Estoy listo para ayudarte a hacerla realidad. Rellena el formulario y me pondré en contacto contigo lo antes posible.</p>
+                    
+                    <!-- Contenedor para el email de contacto directo -->
+                    <div id="contact-email-container"></div>
+
+                </div>
+                <form id="contact-form" class="contact__form">
+                    <input type="hidden" name="access_key" value="437372e1-f89a-4616-89db-876ce1a5f1bb">
+                    <div class="form__group">
+                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                    </div>
+                    <div class="form__group">
+                        <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="button button--primary button--full">Enviar Mensaje</button>
+                    <p id="form-status" class="form__status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p id="footer-text"></p>
+            <div id="footer-social" class="footer__social"></div>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/*
+  ============================================
+  ARCHIVO DE COLORES (colors.css)
+  ============================================
+  Aquí puedes modificar la paleta de colores de todo el sitio.
+  Simplemente cambia los valores de estas variables y la web
+  se actualizará automáticamente.
+*/
+
+:root {
+  /* Paleta de Colores Principal */
+  --color-background: #12121c; /* Fondo principal muy oscuro, casi negro azulado */
+  --color-surface: #1a1a2e;    /* Fondo para tarjetas y secciones, un poco más claro */
+  --color-primary: #e0e0e0;    /* Color de texto principal, blanco suave */
+  --color-secondary: #a0a0c0;  /* Color de texto secundario, para subtítulos y descripciones */
+  --color-border: #2a2a4a;     /* Color para bordes y separadores */
+
+  /* Colores de Acento y Gradientes */
+  --color-accent-1: #8a4fff;   /* Un violeta vibrante para acentos */
+  --color-accent-2: #3d8bff;   /* Un azul brillante para acentos */
+
+  /* Gradiente para textos y elementos destacados */
+  --gradient-text: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-2));
+
+  /* Colores para Interacción */
+  --color-button-hover: #ffffff;
+  --color-text-button-hover: #12121c;
+}
+
