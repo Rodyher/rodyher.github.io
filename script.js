@@ -41,7 +41,7 @@ const portfolioData = {
       "title": "Gestor Financiero Inteligente para Empresas",
       "description": "Desarrollé una aplicación móvil con Flutter que automatiza el análisis de grandes volúmenes de transacciones. La app presenta la información en gráficos visuales e intuitivos, permitiendo un control financiero en tiempo real y decisiones rápidas basadas en datos precisos.",
       "images": [
-        "assets/images.jpeg",
+        "assets/1.gif",
         "assets/images2.jpeg",
         "assets/gif.gif"
       ],
@@ -51,7 +51,7 @@ const portfolioData = {
       "title": "Sistema de Gestión de Asistencia de Personal",
       "description": "Creé una aplicación móvil para registrar y procesar automáticamente la asistencia del personal. El sistema centraliza la información, automatizando el cálculo de la planilla y liberando al equipo administrativo de tareas manuales.",
       "images": [
-        "assets/images2.jpeg",
+        "assets/2.gif",
         "assets/images.jpeg"
       ],
       "tags": ["Flutter", "Móvil", "RRHH", "Gestión"]
@@ -60,7 +60,7 @@ const portfolioData = {
       "title": "Script de Automatización de Reportes",
       "description": "Diseñé un script en Python que extrae datos de múltiples fuentes (Excel, CSVs), los procesa y genera reportes diarios en PDF de forma automática, ahorrando aproximadamente 10 horas de trabajo manual a la semana.",
       "images": [
-        "assets/gif.gif"
+        "assets/3.gif"
       ],
       "tags": ["Python", "Automatización", "PDF", "Excel"]
     },
@@ -68,7 +68,7 @@ const portfolioData = {
       "title": "Plataforma de Gestión Empresarial a Medida",
       "description": "Sistema web integral para la gestión de procesos internos de una empresa. Incluye módulos de clientes, proyectos y facturación, con un sistema de login y roles de usuario para garantizar la seguridad y el acceso controlado a la información a través de un Dashboard intuitivo.",
       "images": [
-        "assets/images.jpeg",
+        "assets/4.gif",
         "assets/images2.jpeg",
         "assets/gif.gif"
       ],
@@ -78,7 +78,7 @@ const portfolioData = {
       "title": "Landing Pages de Alto Impacto y Conversión",
       "description": "Creación de páginas de aterrizaje optimizadas para la conversión. Diseño moderno, rápido y totalmente responsivo para capturar la atención del visitante y guiarlo hacia una acción específica, como registrarse o comprar un producto, convirtiendo visitas en clientes.",
       "images": [
-        "assets/gif.gif",
+        "assets/5.gif",
         "assets/images2.jpeg"
       ],
       "tags": ["HTML5", "CSS3", "JavaScript", "Marketing", "UI/UX"]
@@ -87,7 +87,7 @@ const portfolioData = {
       "title": "Webs Informativas y Educativas Interactivas",
       "description": "Desarrollo de sitios web dedicados a la enseñanza y divulgación. Estas plataformas están diseñadas para presentar contenido de manera clara y estructurada, facilitando el aprendizaje con imágenes, animaciones didácticas y una navegación intuitiva.",
       "images": [
-        "assets/images.jpeg",
+        "assets/6.gif",
         "assets/images2.jpeg",
         "assets/gif.gif"
       ],
