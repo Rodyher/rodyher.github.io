@@ -23,16 +23,23 @@
     <header class="header">
         <nav class="nav container">
             <a href="#" class="nav__logo"></a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#about" class="nav__link">Sobre Mí</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--button">Contactar</a></li>
-                </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav__right">
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#about" class="nav__link" data-key="nav_about">Sobre Mí</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link" data-key="nav_projects">Proyectos</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" data-key="nav_skills">Habilidades</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link nav__link--button" data-key="nav_contact">Contactar</a></li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <button id="language-switcher" class="language-switcher">
+                        <span class="icon">🌐</span> <span id="language-text">EN</span>
+                    </button>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -41,10 +48,10 @@
         <!-- ======== HERO ======== -->
         <section class="hero container">
             <div class="hero__content">
-                <h1 id="hero-title" class="hero__title"></h1>
-                <p id="hero-subtitle" class="hero__subtitle"></p>
-                <div id="availability-status" class="availability"></div>
-                <a href="#contact" class="button button--primary">Hablemos de tu proyecto</a>
+                <h1 id="hero-title" class="hero__title" data-key="hero_title"></h1>
+                <p id="hero-subtitle" class="hero__subtitle" data-key="hero_subtitle"></p>
+                <div id="availability-status" class="availability" data-key="hero_availability"></div>
+                <a href="#contact" class="button button--primary" data-key="hero_button">Hablemos de tu proyecto</a>
                 <div id="hero-social" class="hero__social"></div>
             </div>
             <div class="hero__image">
@@ -56,13 +63,15 @@
 
         <!-- ======== ABOUT ======== -->
         <section id="about" class="about section container">
-            <h2 id="about-title" class="section__title"></h2>
-            <div id="about-content" class="about__container"></div>
+            <h2 id="about-title" class="section__title" data-key="about_title"></h2>
+            <div id="about-content" class="about__container">
+                 <!-- Contenido dinámico desde JS -->
+            </div>
         </section>
 
         <!-- ======== PROJECTS ======== -->
         <section id="projects" class="projects section container">
-            <h2 class="section__title">Casos de Éxito</h2>
+            <h2 class="section__title" data-key="projects_title">Casos de Éxito</h2>
             <div id="projects-container" class="projects__container">
                 <!-- Los proyectos se cargarán aquí desde JS -->
             </div>
@@ -70,7 +79,7 @@
 
         <!-- ======== SKILLS ======== -->
         <section id="skills" class="skills section container">
-            <h2 class="section__title">Mi Caja de Herramientas</h2>
+            <h2 class="section__title" data-key="skills_title">Mi Caja de Herramientas</h2>
             <div id="skills-container" class="skills__container">
                 <!-- Las habilidades se cargarán aquí desde JS -->
             </div>
@@ -78,7 +87,7 @@
         
         <!-- ======== PROCESS ======== -->
         <section id="process" class="process section container">
-            <h2 class="section__title">Mi Proceso de Trabajo</h2>
+            <h2 class="section__title" data-key="process_title">Mi Proceso de Trabajo</h2>
             <div id="process-container" class="process__container">
                 <!-- Los pasos del proceso se cargarán aquí -->
             </div>
@@ -88,8 +97,8 @@
         <section id="contact" class="contact section container">
             <div class="contact__container">
                 <div class="contact__content">
-                    <h2 class="section__title">¿Tienes una idea?</h2>
-                    <p class="contact__description">Estoy listo para ayudarte a hacerla realidad. Rellena el formulario y me pondré en contacto contigo lo antes posible.</p>
+                    <h2 class="section__title" data-key="contact_title">¿Tienes una idea?</h2>
+                    <p class="contact__description" data-key="contact_desc">Estoy listo para ayudarte a hacerla realidad. Rellena el formulario y me pondré en contacto contigo lo antes posible.</p>
                     
                     <!-- Contenedor para el email de contacto directo -->
                     <div id="contact-email-container"></div>
@@ -98,15 +107,15 @@
                 <form id="contact-form" class="contact__form">
                     <input type="hidden" name="access_key" value="437372e1-f89a-4616-89db-876ce1a5f1bb">
                     <div class="form__group">
-                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                        <input type="text" name="name" placeholder="Tu Nombre" required data-key="contact_form_name">
                     </div>
                     <div class="form__group">
-                        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                        <input type="email" name="email" placeholder="Tu Correo Electrónico" required data-key="contact_form_email">
                     </div>
                     <div class="form__group">
-                        <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required data-key="contact_form_message"></textarea>
                     </div>
-                    <button type="submit" class="button button--primary button--full">Enviar Mensaje</button>
+                    <button type="submit" class="button button--primary button--full" data-key="contact_form_button">Enviar Mensaje</button>
                     <p id="form-status" class="form__status"></p>
                 </form>
             </div>
@@ -116,7 +125,7 @@
     <!-- ======== FOOTER ======== -->
     <footer class="footer">
         <div class="footer__container container">
-            <p id="footer-text"></p>
+            <p id="footer-text" data-key="footer_text"></p>
             <div id="footer-social" class="footer__social"></div>
         </div>
     </footer>
