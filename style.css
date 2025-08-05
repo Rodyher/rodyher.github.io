@@ -243,6 +243,7 @@ img {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(138, 79, 255, 0.1), transparent);
   transition: left 0.5s ease;
+  pointer-events: none;
 }
 
 .nav__link:hover::before {
@@ -1360,4 +1361,72 @@ img {
 .focus-visible {
   outline: 2px solid var(--color-accent-1);
   outline-offset: 2px;
+}
+
+
+.contact__email a {
+  display: inline-block; /* O block, según prefieras */
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.contact__email a:hover {
+  filter: drop-shadow(0 0 10px rgba(138, 79, 255, 0.7));
+  transform: translateX(5px);
+}
+
+.contact__email i {
+  margin-right: 0.5rem;
+  /* Hacemos que el icono también tenga el gradiente */
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ======== LANGUAGE SWITCHER ======== */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 2rem; /* Espacio entre los links de nav y el switcher */
+}
+
+.language-button {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.25rem;
+}
+
+.language-button:hover {
+  color: var(--color-primary);
+}
+
+.language-button.active {
+  color: var(--color-accent-1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.language-switcher span {
+  color: var(--color-secondary);
+}
+
+/* --- RESPONSIVE LANGUAGE SWITCHER --- */
+@media screen and (max-width: 992px) {
+  .language-switcher {
+    margin: 2rem 0 0; /* Lo movemos debajo de los links en el menú móvil */
+    justify-content: center;
+    width: 100%;
+  }
 }
