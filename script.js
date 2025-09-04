@@ -164,6 +164,7 @@ class PortfolioApp {
             this.setupEventListeners();
             this.setupProjectCarousels();
             this.setupLanguageSwitcher();
+            this.setupModal(); // Configurar la modal
         } else {
             console.error("No se encontraron datos para renderizar el portafolio.");
         }
@@ -202,7 +203,7 @@ class PortfolioApp {
         }
 
         container.innerHTML = projects.map((proj, projIndex) => `
-            <article class="project__card">
+            <article class="project__card caso-de-exito">
                 <div class="project__image">
                     <div class="carousel__wrapper">
                         ${proj.images.map((img, imgIndex) => `
@@ -256,6 +257,50 @@ class PortfolioApp {
             dots.forEach(dot => {
                 dot.addEventListener('click', (e) => showSlide(parseInt(e.target.dataset.slideTo)));
             });
+        });
+    }
+
+    setupModal() {
+        const modal = document.getElementById('media-modal');
+        const modalMedia = document.getElementById('modal-media');
+        const closeButton = modal.querySelector('.close-button');
+        const projectsContainer = document.getElementById('projects-container');
+
+        if (!modal || !modalMedia || !closeButton || !projectsContainer) {
+            console.error('Elementos de la modal no encontrados.');
+            return;
+        }
+
+        const openModal = (target) => {
+            const image = target.querySelector('.carousel__slide.active');
+            if (image) {
+                modalMedia.src = image.src;
+                modal.classList.add('visible');
+            }
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('visible');
+            setTimeout(() => {
+                modalMedia.src = '';
+            }, 400); // Coincide con la duración de la transición de opacidad
+        };
+
+        projectsContainer.addEventListener('click', (e) => {
+            const clickedCard = e.target.closest('.caso-de-exito');
+            const isCarouselControl = e.target.closest('.carousel__button, .carousel__dots');
+            
+            if (clickedCard && !isCarouselControl) {
+                openModal(clickedCard);
+            }
+        });
+
+        closeButton.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
         });
     }
 

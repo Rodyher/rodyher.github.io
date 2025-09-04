@@ -1467,3 +1467,80 @@ img {
     align-items: center;
   }
 }
+
+/* ======== ESTILOS PARA LA VENTANA MODAL (LIGHTBOX) ======== */
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 90vw; /* Define un ancho grande */
+    height: 85vh; /* Define un alto grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 0.5s ease-in-out;
+    /* Importante: quitamos padding o bordes que puedan afectar el tamaño del hijo */
+}
+
+#modal-media {
+    /* La magia está aquí: la imagen ocupa el 100% del contenedor padre */
+    width: 100%;
+    height: 100%;
+    /* object-fit se asegura de que la imagen se escale correctamente sin deformarse */
+    object-fit: contain; 
+    display: block;
+}
+
+.close-button {
+    position: fixed; /* Fijo en la ventana */
+    top: 20px;
+    right: 30px;
+    z-index: 1010; /* Por encima de todo */
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(0,0,0,0.7); /* Sombra para legibilidad */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--color-accent-1);
+    transform: scale(1.2);
+}
+
+/* Animación para el contenedor de la modal */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Para que el cursor cambie en las tarjetas de proyecto */
+.project__card.caso-de-exito {
+    cursor: pointer;
+}
