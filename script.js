@@ -15,12 +15,12 @@ const portfolioData = {
     "formspreeEndpoint": "https://api.web3forms.com/submit"
   },
   "projects": [
-    { "images": ["assets/1.gif"], "tags": ["Flutter", "Móvil", "Finanzas", "Automatización"] },
-    { "images": ["assets/2.gif"], "tags": ["Flutter", "Móvil", "RRHH", "Gestión"] },
-    { "images": ["assets/3.gif"], "tags": ["Python", "Automatización", "PDF", "Excel"] },
-    { "images": ["assets/4.gif"], "tags": ["WebApp", "Gestión", "Seguridad", "Base de Datos", "Login"] },
-    { "images": ["assets/5.gif"], "tags": ["HTML5", "CSS3", "JavaScript", "Marketing", "UI/UX"] },
-    { "images": ["assets/6.gif"], "tags": ["Web", "Educación", "Contenido", "SEO", "Interactividad"] }
+    { "images": ["assets/1.mp4"], "tags": ["Flutter", "Móvil", "Finanzas", "Automatización"] },
+    { "images": ["assets/2.mp4"], "tags": ["Flutter", "Móvil", "RRHH", "Gestión"] },
+    { "images": ["assets/3.mp4"], "tags": ["Python", "Automatización", "PDF", "Excel"] },
+    { "images": ["assets/4.mp4"], "tags": ["WebApp", "Gestión", "Seguridad", "Base de Datos", "Login"] },
+    { "images": ["assets/5.mp4"], "tags": ["HTML5", "CSS3", "JavaScript", "Marketing", "UI/UX"] },
+    { "images": ["assets/6.mp4"], "tags": ["Web", "Educación", "Contenido", "SEO", "Interactividad"] }
   ],
   "skills": [
     "Python", "Dart & Flutter", "SQL", "JavaScript", "HTML5", "CSS3",
@@ -207,7 +207,7 @@ class PortfolioApp {
                 <div class="project__image">
                     <div class="carousel__wrapper">
                         ${proj.images.map((img, imgIndex) => `
-                            <img src="${img}" alt="Imagen del proyecto" class="carousel__slide ${imgIndex === 0 ? 'active' : ''}">
+                            <video src="${img}" class="carousel__slide ${imgIndex === 0 ? 'active' : ''}" autoplay muted loop playsinline></video>
                         `).join('')}
                     </div>
                     ${proj.images.length > 1 ? `
@@ -272,15 +272,17 @@ class PortfolioApp {
         }
 
         const openModal = (target) => {
-            const image = target.querySelector('.carousel__slide.active');
-            if (image) {
-                modalMedia.src = image.src;
+            const video = target.querySelector('.carousel__slide.active');
+            if (video) {
+                modalMedia.src = video.src;
+                modalMedia.play(); // Reproducir al abrir
                 modal.classList.add('visible');
             }
         };
 
         const closeModal = () => {
             modal.classList.remove('visible');
+            modalMedia.pause(); // Pausar al cerrar
             setTimeout(() => {
                 modalMedia.src = '';
             }, 400); // Coincide con la duración de la transición de opacidad
