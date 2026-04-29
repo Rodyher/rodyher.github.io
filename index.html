@@ -1,226 +1,890 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio: Rodyher</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodyher Viloria — Automatización & Desarrollo a Medida</title>
+  <meta name="description" content="Transformo procesos manuales en sistemas automáticos. Desarrollador de software y estratega de automatización empresarial.">
 
-    <!-- Hojas de Estilo -->
-    <link rel="stylesheet" href="colors.css" />
-    <link rel="stylesheet" href="style.css" />
+  <!-- Fonts: Outfit (display) + Nunito (body) + Fira Code (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Iconos (Font Awesome) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
 
-    <!-- Fuentes (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- ======== HEADER ======== -->
-    <header class="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo"></a>
-        <div class="nav__right">
-          <div class="nav__menu">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#about" class="nav__link" data-key="nav_about"
-                  >Sobre Mí</a
-                >
-              </li>
-              <li class="nav__item">
-                <a href="#projects" class="nav__link" data-key="nav_projects"
-                  >Proyectos</a
-                >
-              </li>
-              <li class="nav__item">
-                <a href="#skills" class="nav__link" data-key="nav_skills"
-                  >Habilidades</a
-                >
-              </li>
-              <li class="nav__item">
-                <a
-                  href="#contact"
-                  class="nav__link nav__link--button"
-                  data-key="nav_contact"
-                  >Contactar</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="nav__actions">
-            <button id="language-switcher" class="language-switcher">
-              <span class="icon">🌐</span> <span id="language-text">EN</span>
-            </button>
-            <div class="nav__toggle" id="nav-toggle">
-              <i class="fas fa-bars"></i>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <main class="main">
-      <!-- ======== HERO ======== -->
-      <section class="hero container">
-        <div class="hero__content">
-          <h1 id="hero-title" class="hero__title" data-key="hero_title"></h1>
-          <p
-            id="hero-subtitle"
-            class="hero__subtitle"
-            data-key="hero_subtitle"
-          ></p>
-          <div
-            id="availability-status"
-            class="availability"
-            data-key="hero_availability"
-          ></div>
-          <a
-            href="#contact"
-            class="button button--primary"
-            data-key="hero_button"
-            >Hablemos de tu proyecto</a
-          >
-          <div id="hero-social" class="hero__social"></div>
-        </div>
-        <div class="hero__image">
-          <div class="hero__image-blob"></div>
-          <!-- Puedes poner una imagen tuya aquí si quieres -->
-          <!-- <img src="path/to/your/image.png" alt="Tu Nombre"> -->
-        </div>
-      </section>
+<!-- ===================== MOBILE MENU ===================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre-mi" data-es="Sobre mí" data-en="About me">Sobre mí</a>
+  <a href="#casos" data-es="Casos de éxito" data-en="Case studies">Casos de éxito</a>
+  <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+  <a href="#contacto" data-es="Hablemos →" data-en="Let's talk →">Hablemos →</a>
+  <div class="mobile-menu-footer">rodyher15@gmail.com</div>
+</div>
 
-      <!-- ======== ABOUT ======== -->
-      <section id="about" class="about section container">
-        <h2 id="about-title" class="section__title" data-key="about_title"></h2>
-        <div id="about-content" class="about__container">
-          <!-- Contenido dinámico desde JS -->
-        </div>
-      </section>
+<!-- ===================== NAV ===================== -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="#hero">Rodyher<span>.</span></a>
 
-      <!-- ======== PROJECTS ======== -->
-      <section id="projects" class="projects section container">
-        <h2 class="section__title" data-key="projects_title">Casos de Éxito</h2>
-        <div id="projects-container" class="projects__container">
-          <!-- Los proyectos se cargarán aquí desde JS -->
-        </div>
-      </section>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi"  data-es="Sobre mí"       data-en="About me">Sobre mí</a></li>
+      <li><a href="#casos"     data-es="Casos de éxito" data-en="Case studies">Casos de éxito</a></li>
+      <li><a href="#servicios" data-es="Servicios"       data-en="Services">Servicios</a></li>
+      <li><a href="#proceso"   data-es="Proceso"         data-en="Process">Proceso</a></li>
+      <li><a href="#contacto"  class="nav-cta" data-es="Hablemos →" data-en="Let's talk →">Hablemos →</a></li>
+    </ul>
 
-      <!-- ======== SKILLS ======== -->
-      <section id="skills" class="skills section container">
-        <h2 class="section__title" data-key="skills_title">
-          Mi Caja de Herramientas
-        </h2>
-        <div id="skills-container" class="skills__container">
-          <!-- Las habilidades se cargarán aquí desde JS -->
-        </div>
-      </section>
-
-      <!-- ======== PROCESS ======== -->
-      <section id="process" class="process section container">
-        <h2 class="section__title" data-key="process_title">
-          Mi Proceso de Trabajo
-        </h2>
-        <div id="process-container" class="process__container">
-          <!-- Los pasos del proceso se cargarán aquí -->
-        </div>
-      </section>
-
-      <!-- ======== CONTACT ======== -->
-      <section id="contact" class="contact section container">
-        <div class="contact__container">
-          <div class="contact__content">
-            <h2 class="section__title" data-key="contact_title">
-              ¿Tienes una idea?
-            </h2>
-            <p class="contact__description" data-key="contact_desc">
-              Estoy listo para ayudarte a hacerla realidad. Rellena el
-              formulario y me pondré en contacto contigo lo antes posible.
-            </p>
-
-            <!-- Contenedor para el email de contacto directo -->
-            <div id="contact-email-container"></div>
-          </div>
-          <form id="contact-form" class="contact__form">
-            <input
-              type="hidden"
-              name="access_key"
-              value="437372e1-f89a-4616-89db-876ce1a5f1bb"
-            />
-            <div class="form__group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Tu Nombre"
-                required
-                data-key="contact_form_name"
-              />
-            </div>
-            <div class="form__group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Tu Correo Electrónico"
-                required
-                data-key="contact_form_email"
-              />
-            </div>
-            <div class="form__group">
-              <textarea
-                name="message"
-                placeholder="Cuéntame sobre tu proyecto..."
-                required
-                data-key="contact_form_message"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="button button--primary button--full"
-              data-key="contact_form_button"
-            >
-              Enviar Mensaje
-            </button>
-            <p id="form-status" class="form__status"></p>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- ======== FOOTER ======== -->
-    <footer class="footer">
-      <div class="footer__container container">
-        <p id="footer-text" data-key="footer_text"></p>
-        <div id="footer-social" class="footer__social"></div>
+    <div class="nav-right-group" style="display:flex;align-items:center;gap:12px;">
+      <div class="availability">
+        <span class="dot"></span>
+        <span data-es="Disponible" data-en="Available">Disponible</span>
       </div>
-    </footer>
 
-    <!-- Script principal -->
-    <script src="script.js"></script>
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" id="langBtnEs" onclick="setLang('es')">
+          <span class="lang-globe">🌐</span> ES
+        </button>
+        <button class="lang-btn" id="langBtnEn" onclick="setLang('en')">EN</button>
+      </div>
 
-    <!-- Modal Structure -->
-    <div id="media-modal" class="modal">
-      <span class="close-button">&times;</span>
-      <div class="modal-content">
-        <video
-          id="modal-media"
-          src=""
-          controls
-          autoplay
-          style="max-width: 100%; max-height: 80vh"
-        ></video>
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <div class="hero-badge-dot">⚡</div>
+        <span data-es="Automatización · Desarrollo · Resultados" data-en="Automation · Development · Results">
+          Automatización · Desarrollo · Resultados
+        </span>
+      </div>
+
+      <h1>
+        <span class="h1-line" data-es="Tu negocio merece"       data-en="Your business deserves">Tu negocio merece</span>
+        <span class="h1-line h1-accent" data-es="trabajar sin fricción." data-en="to work without friction.">trabajar sin fricción.</span>
+      </h1>
+
+      <p class="hero-sub"
+         data-es="Transformo tareas manuales, errores repetitivos y procesos lentos en <strong>sistemas que trabajan solos</strong>. Soy Rodyher Viloria, desarrollador y estratega de automatización empresarial."
+         data-en="I transform manual tasks, repetitive errors, and slow processes into <strong>systems that run themselves</strong>. I'm Rodyher Viloria, software developer and business automation strategist.">
+        Transformo tareas manuales, errores repetitivos y procesos lentos en <strong>sistemas que trabajan solos</strong>. Soy Rodyher Viloria, desarrollador y estratega de automatización empresarial.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary"
+           data-es="Quiero automatizar mi negocio →" data-en="I want to automate my business →">
+          Quiero automatizar mi negocio →
+        </a>
+        <a href="#casos" class="btn-ghost"
+           data-es="Ver casos de éxito" data-en="See case studies">
+          Ver casos de éxito
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">90%</div>
+          <div class="hero-stat-label"
+               data-es="reducción de trabajo repetitivo" data-en="reduction in repetitive work">
+            reducción de trabajo repetitivo
+          </div>
+        </div>
+        <div class="stat-sep"></div>
+        <div>
+          <div class="hero-stat-num">+20</div>
+          <div class="hero-stat-label" data-es="proyectos entregados" data-en="projects delivered">
+            proyectos entregados
+          </div>
+        </div>
+        <div class="stat-sep"></div>
+        <div>
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label" data-es="soluciones a medida" data-en="custom solutions">
+            soluciones a medida
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEMA → SOLUCIÓN ===================== -->
+<section id="problema" class="section">
+  <div class="container">
+    <div class="problema-grid">
+
+      <!-- PROBLEMA -->
+      <div class="reveal">
+        <span class="label" data-es="El problema" data-en="The problem">El problema</span>
+        <h2 data-es="¿Tu equipo pierde horas haciendo lo mismo cada día?" data-en="Is your team losing hours doing the same thing every day?">
+          ¿Tu equipo pierde horas haciendo lo mismo cada día?
+        </h2>
+        <div class="problema-pains">
+
+          <div class="pain-item">
+            <div class="pain-icon">📋</div>
+            <div class="pain-text">
+              <strong data-es="Informes manuales en Excel" data-en="Manual Excel reports">Informes manuales en Excel</strong>
+              <span data-es="2 horas cada semana preparando reportes que podrían generarse solos." data-en="2 hours each week preparing reports that could generate themselves.">
+                2 horas cada semana preparando reportes que podrían generarse solos.
+              </span>
+            </div>
+          </div>
+
+          <div class="pain-item">
+            <div class="pain-icon">🔄</div>
+            <div class="pain-text">
+              <strong data-es="Datos copiados entre sistemas" data-en="Data copied between systems">Datos copiados entre sistemas</strong>
+              <span data-es="Copiar y pegar de un sistema a otro, con riesgo constante de error humano." data-en="Copy and paste from one system to another, with constant risk of human error.">
+                Copiar y pegar de un sistema a otro, con riesgo constante de error humano.
+              </span>
+            </div>
+          </div>
+
+          <div class="pain-item">
+            <div class="pain-icon">📩</div>
+            <div class="pain-text">
+              <strong data-es="Respuestas manuales a clientes" data-en="Manual client responses">Respuestas manuales a clientes</strong>
+              <span data-es="Correos y notificaciones que deberían enviarse automáticamente." data-en="Emails and notifications that should send automatically.">
+                Correos y notificaciones que deberían enviarse automáticamente.
+              </span>
+            </div>
+          </div>
+
+          <div class="pain-item">
+            <div class="pain-icon">⏳</div>
+            <div class="pain-text">
+              <strong data-es="Procesos que no escalan" data-en="Processes that don't scale">Procesos que no escalan</strong>
+              <span data-es="Cuando creces, el caos crece contigo. El equipo se satura." data-en="When you grow, chaos grows with you. The team gets overwhelmed.">
+                Cuando creces, el caos crece contigo. El equipo se satura.
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SOLUCIÓN -->
+      <div class="reveal reveal-delay-2">
+        <span class="label" data-es="Mi solución" data-en="My solution">Mi solución</span>
+        <h2 data-es="Construyo sistemas que hacen el trabajo por ti." data-en="I build systems that do the work for you.">
+          Construyo sistemas que hacen el trabajo por ti.
+        </h2>
+        <div class="solucion-list">
+
+          <div class="sol-item">
+            <div class="sol-num">01</div>
+            <div class="sol-content">
+              <h4 data-es="Analizo tu proceso actual" data-en="I analyze your current process">Analizo tu proceso actual</h4>
+              <p data-es="Entiendo tu negocio antes de proponer cualquier tecnología. No hay solución universal." data-en="I understand your business before proposing any technology. There's no universal solution.">
+                Entiendo tu negocio antes de proponer cualquier tecnología. No hay solución universal.
+              </p>
+            </div>
+          </div>
+
+          <div class="sol-item">
+            <div class="sol-num">02</div>
+            <div class="sol-content">
+              <h4 data-es="Diseño la automatización exacta" data-en="I design the exact automation">Diseño la automatización exacta</h4>
+              <p data-es="Conecto tus herramientas existentes o construyo lo que necesitas desde cero." data-en="I connect your existing tools or build what you need from scratch.">
+                Conecto tus herramientas existentes o construyo lo que necesitas desde cero.
+              </p>
+            </div>
+          </div>
+
+          <div class="sol-item">
+            <div class="sol-num">03</div>
+            <div class="sol-content">
+              <h4 data-es="Libero tiempo real en tu equipo" data-en="I free up real time in your team">Libero tiempo real en tu equipo</h4>
+              <p data-es="El resultado: menos tareas manuales, menos errores, más capacidad para crecer." data-en="The result: fewer manual tasks, fewer errors, more capacity to grow.">
+                El resultado: menos tareas manuales, menos errores, más capacidad para crecer.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE MÍ ===================== -->
+<section id="sobre-mi" class="section">
+  <div class="container">
+    <div class="sobre-grid">
+
+      <!-- AVATAR CARD -->
+      <div class="reveal">
+        <div class="avatar-card">
+          <div class="avatar-ring">
+  <img src="assets/user.jpg" alt="Rodyher Viloria">
+</div>
+          <div class="avatar-name">Rodyher Viloria</div>
+          <div class="avatar-role"
+               data-es="Arquitecto de Soluciones · Automatización"
+               data-en="Solutions Architect · Automation">
+            Arquitecto de Soluciones · Automatización
+          </div>
+          <div class="avatar-badges">
+            <span class="badge">Python</span>
+            <span class="badge">Flutter</span>
+            <span class="badge">SQL</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">RPA</span>
+            <span class="badge">Docker</span>
+          </div>
+          <div class="avatar-links">
+            <a href="https://www.linkedin.com/in/rodyher-viloria-0896b6289/" class="icon-link" title="LinkedIn" target="_blank" rel="noopener">in</a>
+            <a href="https://github.com/rodyher" class="icon-link" title="GitHub" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a href="mailto:rodyher15@gmail.com" class="icon-link" title="Email">@</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="sobre-texto reveal reveal-delay-2">
+        <span class="label" data-es="Sobre mí" data-en="About me">Sobre mí</span>
+        <h2 style="margin-bottom:24px"
+            data-es="No solo programo.<br>Resuelvo problemas de negocio."
+            data-en="I don't just code.<br>I solve business problems.">
+          No solo programo.<br>Resuelvo problemas de negocio.
+        </h2>
+
+        <p data-es="Soy Rodyher Viloria, desarrollador de software y estratega de automatización. Trabajo con empresas que saben que tienen procesos ineficientes pero no saben exactamente por dónde empezar a mejorarlos."
+           data-en="I'm Rodyher Viloria, software developer and automation strategist. I work with companies that know they have inefficient processes but don't know exactly where to start improving them.">
+          Soy Rodyher Viloria, desarrollador de software y estratega de automatización. Trabajo con empresas que saben que tienen procesos ineficientes pero no saben exactamente por dónde empezar a mejorarlos.
+        </p>
+
+        <p data-es="Mi enfoque es <strong>consultivo primero, técnico después</strong>. Antes de escribir una sola línea de código, entiendo cómo funciona tu negocio, qué te duele y qué resultado quieres lograr."
+           data-en="My approach is <strong>consultative first, technical second</strong>. Before writing a single line of code, I understand how your business works, what hurts, and what result you want to achieve.">
+          Mi enfoque es <strong>consultivo primero, técnico después</strong>. Antes de escribir una sola línea de código, entiendo cómo funciona tu negocio, qué te duele y qué resultado quieres lograr.
+        </p>
+
+        <p data-es="La diferencia entre una automatización genérica y una que realmente funciona está en <strong>entender el contexto</strong>. Eso es lo que hago."
+           data-en="The difference between a generic automation and one that actually works is in <strong>understanding the context</strong>. That's what I do.">
+          La diferencia entre una automatización genérica y una que realmente funciona está en <strong>entender el contexto</strong>. Eso es lo que hago.
+        </p>
+
+        <div class="valores-grid">
+          <div class="valor-card">
+            <div class="valor-icon">🎯</div>
+            <div class="valor-title" data-es="Enfoque en resultados" data-en="Results-focused">Enfoque en resultados</div>
+            <div class="valor-desc" data-es="No entrego código, entrego impacto medible en tu operación." data-en="I don't deliver code, I deliver measurable impact on your operation.">
+              No entrego código, entrego impacto medible en tu operación.
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">🔧</div>
+            <div class="valor-title" data-es="Trabajo con lo que tienes" data-en="Work with what you have">Trabajo con lo que tienes</div>
+            <div class="valor-desc" data-es="Integro tus sistemas existentes. No hay que tirar todo y empezar de cero." data-en="I integrate your existing systems. No need to throw everything away and start over.">
+              Integro tus sistemas existentes. No hay que tirar todo y empezar de cero.
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">💬</div>
+            <div class="valor-title" data-es="Comunicación constante" data-en="Constant communication">Comunicación constante</div>
+            <div class="valor-desc" data-es="Sabes qué pasa en cada etapa del proyecto. Sin sorpresas." data-en="You know what happens at every stage of the project. No surprises.">
+              Sabes qué pasa en cada etapa del proyecto. Sin sorpresas.
+            </div>
+          </div>
+          <div class="valor-card">
+            <div class="valor-icon">📈</div>
+            <div class="valor-title" data-es="Soluciones que escalan" data-en="Solutions that scale">Soluciones que escalan</div>
+            <div class="valor-desc" data-es="Construyo pensando en el mañana, no solo en el problema de hoy." data-en="I build thinking about tomorrow, not just today's problem.">
+              Construyo pensando en el mañana, no solo en el problema de hoy.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CASOS DE ÉXITO ===================== -->
+<section id="casos" class="section">
+  <div class="container">
+    <div class="casos-header">
+      <div>
+        <span class="label" data-es="Casos de éxito" data-en="Case studies">Casos de éxito</span>
+        <h2 data-es="Resultados reales,<br>no promesas." data-en="Real results,<br>not promises.">Resultados reales,<br>no promesas.</h2>
+      </div>
+      <p style="font-size:15px;color:var(--text-muted);max-width:320px;font-weight:400"
+         data-es="Haz clic en cualquier tarjeta para ver el demo en video."
+         data-en="Click any card to watch the demo video.">
+        Haz clic en cualquier tarjeta para ver el demo en video.
+      </p>
+    </div>
+
+    <div class="casos-grid">
+
+      <!-- Caso 1 -->
+      <div class="caso-card reveal" data-video="assets/1.mp4">
+        <div class="caso-top">
+          <span class="caso-tag" data-es="Flutter · Finanzas" data-en="Flutter · Finance">Flutter · Finanzas</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/1.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Gestor Financiero Inteligente" data-en="Intelligent Financial Manager">Gestor Financiero Inteligente</div>
+          <div class="caso-problema"
+               data-es="App móvil que automatiza el análisis de grandes volúmenes de transacciones con gráficos en tiempo real."
+               data-en="Mobile app that automates analysis of large transaction volumes with real-time charts.">
+            App móvil que automatiza el análisis de grandes volúmenes de transacciones con gráficos en tiempo real.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="↓ 90% tiempo análisis" data-en="↓ 90% analysis time">↓ 90% tiempo análisis</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">Flutter</span><span class="tech-pill">Dart</span><span class="tech-pill">Finanzas</span><span class="tech-pill">Móvil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso 2 -->
+      <div class="caso-card reveal reveal-delay-1" data-video="assets/2.mp4">
+        <div class="caso-top">
+          <span class="caso-tag" data-es="Flutter · RRHH" data-en="Flutter · HR">Flutter · RRHH</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/2.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Sistema de Gestión de Asistencia" data-en="Attendance Management System">Sistema de Gestión de Asistencia</div>
+          <div class="caso-problema"
+               data-es="App para registrar y procesar automáticamente la asistencia del personal, automatizando el cálculo de planilla."
+               data-en="App to automatically record and process staff attendance, automating payroll calculation.">
+            App para registrar y procesar automáticamente la asistencia del personal, automatizando el cálculo de planilla.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="↓ 100% trabajo manual" data-en="↓ 100% manual work">↓ 100% trabajo manual</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">Flutter</span><span class="tech-pill">Gestión</span><span class="tech-pill">RRHH</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso 3 -->
+      <div class="caso-card reveal reveal-delay-2" data-video="assets/3.mp4">
+        <div class="caso-top">
+          <span class="caso-tag" data-es="Python · Automatización" data-en="Python · Automation">Python · Automatización</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/3.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Script de Reportes Automáticos" data-en="Automated Report Script">Script de Reportes Automáticos</div>
+          <div class="caso-problema"
+               data-es="Extrae datos de Excel/CSVs y genera reportes PDF automáticamente. Ahorra ~10 horas de trabajo manual por semana."
+               data-en="Extracts data from Excel/CSVs and auto-generates PDF reports. Saves ~10 hours of manual work per week.">
+            Extrae datos de Excel/CSVs y genera reportes PDF automáticamente. Ahorra ~10 horas de trabajo manual por semana.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="↓ 10 hrs/semana" data-en="↓ 10 hrs/week">↓ 10 hrs/semana</span>
+            <span class="resultado-chip" data-es="0 errores" data-en="0 errors">0 errores</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">Python</span><span class="tech-pill">PDF</span><span class="tech-pill">Excel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso 4 -->
+      <div class="caso-card reveal" data-video="assets/4.mp4">
+        <div class="caso-top">
+          <span class="caso-tag" data-es="WebApp · Gestión" data-en="WebApp · Management">WebApp · Gestión</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/4.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Plataforma de Gestión Empresarial" data-en="Business Management Platform">Plataforma de Gestión Empresarial</div>
+          <div class="caso-problema"
+               data-es="Sistema web integral con módulos de clientes, proyectos y facturación, roles de usuario y dashboard intuitivo."
+               data-en="Full web system with customer, project and billing modules, user roles and intuitive dashboard.">
+            Sistema web integral con módulos de clientes, proyectos y facturación, roles de usuario y dashboard intuitivo.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="1 sistema central" data-en="1 central system">1 sistema central</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">WebApp</span><span class="tech-pill">Login</span><span class="tech-pill">Base de Datos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso 5 -->
+      <div class="caso-card reveal reveal-delay-1" data-video="assets/5.mp4">
+        <div class="caso-top">
+          <span class="caso-tag">HTML · CSS · JS</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/5.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Landing Pages de Alto Impacto" data-en="High-Impact Landing Pages">Landing Pages de Alto Impacto</div>
+          <div class="caso-problema"
+               data-es="Páginas de aterrizaje optimizadas para conversión. Diseño moderno, rápido y responsivo que convierte visitas en clientes."
+               data-en="Landing pages optimized for conversion. Modern, fast, responsive design that turns visits into clients.">
+            Páginas de aterrizaje optimizadas para conversión. Diseño moderno, rápido y responsivo que convierte visitas en clientes.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="↑ Conversión" data-en="↑ Conversion">↑ Conversión</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">HTML5</span><span class="tech-pill">CSS3</span><span class="tech-pill">JavaScript</span><span class="tech-pill">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso 6 -->
+      <div class="caso-card reveal reveal-delay-2" data-video="assets/6.mp4">
+        <div class="caso-top">
+          <span class="caso-tag" data-es="Web · Educación" data-en="Web · Education">Web · Educación</span>
+        </div>
+        <div class="caso-video-wrap">
+          <video src="assets/6.mp4" muted loop playsinline></video>
+          <div class="caso-play-btn">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" fill="rgba(124,58,237,0.7)" stroke="rgba(167,139,250,0.6)" stroke-width="1.5"/>
+              <path d="M24 20L42 30L24 40V20Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-title" data-es="Webs Educativas Interactivas" data-en="Interactive Educational Websites">Webs Educativas Interactivas</div>
+          <div class="caso-problema"
+               data-es="Plataformas web para enseñanza y divulgación. Contenido estructurado con animaciones y navegación intuitiva."
+               data-en="Web platforms for teaching and content sharing. Structured content with animations and intuitive navigation.">
+            Plataformas web para enseñanza y divulgación. Contenido estructurado con animaciones y navegación intuitiva.
+          </div>
+          <div class="caso-resultado">
+            <span class="resultado-chip" data-es="↑ Retención" data-en="↑ Retention">↑ Retención</span>
+          </div>
+          <div class="caso-techs">
+            <span class="tech-pill">Web</span><span class="tech-pill">SEO</span><span class="tech-pill">Interactividad</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal-overlay" id="videoModal">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" id="videoModalClose">✕</button>
+    <video id="videoModalPlayer" controls playsinline></video>
+  </div>
+</div>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section id="servicios" class="section">
+  <div class="container">
+    <div style="max-width:600px;margin-bottom:60px" class="reveal">
+      <span class="label" data-es="Servicios" data-en="Services">Servicios</span>
+      <h2 data-es="¿Qué puedo construir para ti?" data-en="What can I build for you?">¿Qué puedo construir para ti?</h2>
+    </div>
+    <div class="servicios-grid">
+
+      <div class="servicio-card reveal">
+        <div class="servicio-num">01</div>
+        <div class="servicio-icon">⚡</div>
+        <div class="servicio-title" data-es="Automatización de Procesos" data-en="Process Automation">Automatización de Procesos</div>
+        <div class="servicio-desc"
+             data-es="Elimino las tareas repetitivas de tu equipo conectando tus sistemas, automatizando flujos y creando pipelines inteligentes."
+             data-en="I eliminate repetitive tasks from your team by connecting your systems, automating workflows, and creating intelligent pipelines.">
+          Elimino las tareas repetitivas de tu equipo conectando tus sistemas, automatizando flujos y creando pipelines inteligentes.
+        </div>
+        <ul class="servicio-features">
+          <li data-es="Integración entre plataformas (CRM, ERP, Sheets)" data-en="Integration between platforms (CRM, ERP, Sheets)">Integración entre plataformas (CRM, ERP, Sheets)</li>
+          <li data-es="Generación automática de reportes" data-en="Automatic report generation">Generación automática de reportes</li>
+          <li data-es="Notificaciones y alertas inteligentes" data-en="Smart notifications and alerts">Notificaciones y alertas inteligentes</li>
+          <li data-es="Automatización de emails y documentos" data-en="Email and document automation">Automatización de emails y documentos</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card reveal reveal-delay-1">
+        <div class="servicio-num">02</div>
+        <div class="servicio-icon">💻</div>
+        <div class="servicio-title" data-es="Software a Medida" data-en="Custom Software">Software a Medida</div>
+        <div class="servicio-desc"
+             data-es="Aplicaciones web construidas específicamente para tu proceso de negocio. Nada genérico, nada que sobre."
+             data-en="Web applications built specifically for your business process. Nothing generic, nothing unnecessary.">
+          Aplicaciones web construidas específicamente para tu proceso de negocio. Nada genérico, nada que sobre.
+        </div>
+        <ul class="servicio-features">
+          <li data-es="Portales internos y dashboards" data-en="Internal portals and dashboards">Portales internos y dashboards</li>
+          <li data-es="Sistemas de gestión (inventario, pedidos, RRHH)" data-en="Management systems (inventory, orders, HR)">Sistemas de gestión (inventario, pedidos, RRHH)</li>
+          <li data-es="APIs y microservicios" data-en="APIs and microservices">APIs y microservicios</li>
+          <li data-es="Migración de Excel/Access a sistemas web" data-en="Excel/Access migration to web systems">Migración de Excel/Access a sistemas web</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card reveal reveal-delay-2">
+        <div class="servicio-num">03</div>
+        <div class="servicio-icon">📱</div>
+        <div class="servicio-title" data-es="Apps Móviles" data-en="Mobile Apps">Apps Móviles</div>
+        <div class="servicio-desc"
+             data-es="Aplicaciones móviles para que tu equipo trabaje desde cualquier lugar, sin depender de papeles o llamadas."
+             data-en="Mobile applications so your team can work from anywhere, without depending on papers or phone calls.">
+          Aplicaciones móviles para que tu equipo trabaje desde cualquier lugar, sin depender de papeles o llamadas.
+        </div>
+        <ul class="servicio-features">
+          <li data-es="Apps iOS y Android con Flutter" data-en="iOS and Android apps with Flutter">Apps iOS y Android con Flutter</li>
+          <li data-es="Formularios y captura de datos en campo" data-en="Forms and field data capture">Formularios y captura de datos en campo</li>
+          <li data-es="Sincronización offline / online" data-en="Offline / online synchronization">Sincronización offline / online</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card reveal reveal-delay-3">
+        <div class="servicio-num">04</div>
+        <div class="servicio-icon">🌐</div>
+        <div class="servicio-title" data-es="Webs y Sistemas Internos" data-en="Websites & Internal Systems">Webs y Sistemas Internos</div>
+        <div class="servicio-desc"
+             data-es="Desde sitios de presencia profesional hasta intranets complejas. Diseño y desarrollo orientado a resultados."
+             data-en="From professional presence sites to complex intranets. Results-oriented design and development.">
+          Desde sitios de presencia profesional hasta intranets complejas. Diseño y desarrollo orientado a resultados.
+        </div>
+        <ul class="servicio-features">
+          <li data-es="Landing pages de alta conversión" data-en="High-conversion landing pages">Landing pages de alta conversión</li>
+          <li data-es="Intranets y herramientas internas" data-en="Intranets and internal tools">Intranets y herramientas internas</li>
+          <li data-es="Sistemas de control de acceso" data-en="Access control systems">Sistemas de control de acceso</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESO ===================== -->
+<section id="proceso" class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 0" class="reveal">
+      <span class="label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+      <h2 data-es="Un proceso claro,<br>sin sorpresas." data-en="A clear process,<br>no surprises.">Un proceso claro,<br>sin sorpresas.</h2>
+    </div>
+    <div class="proceso-steps">
+      <div class="paso reveal">
+        <div class="paso-num">1</div>
+        <div class="paso-title" data-es="Diagnóstico" data-en="Diagnosis">Diagnóstico</div>
+        <div class="paso-desc"
+             data-es="Entiendo tu proceso actual, tus dolores y qué quieres lograr. Sesión gratuita de 30 min."
+             data-en="I understand your current process, your pain points, and what you want to achieve. Free 30-min session.">
+          Entiendo tu proceso actual, tus dolores y qué quieres lograr. Sesión gratuita de 30 min.
+        </div>
+      </div>
+      <div class="paso reveal reveal-delay-1">
+        <div class="paso-num">2</div>
+        <div class="paso-title" data-es="Propuesta" data-en="Proposal">Propuesta</div>
+        <div class="paso-desc"
+             data-es="Te presento un plan detallado: qué voy a construir, cómo, cuánto tiempo y cuánto cuesta."
+             data-en="I present a detailed plan: what I'll build, how, how long, and how much it costs.">
+          Te presento un plan detallado: qué voy a construir, cómo, cuánto tiempo y cuánto cuesta.
+        </div>
+      </div>
+      <div class="paso reveal reveal-delay-2">
+        <div class="paso-num">3</div>
+        <div class="paso-title" data-es="Desarrollo" data-en="Development">Desarrollo</div>
+        <div class="paso-desc"
+             data-es="Construyo con actualizaciones regulares. Ves el progreso en cada etapa, no al final."
+             data-en="I build with regular updates. You see progress at each stage, not at the end.">
+          Construyo con actualizaciones regulares. Ves el progreso en cada etapa, no al final.
+        </div>
+      </div>
+      <div class="paso reveal reveal-delay-3">
+        <div class="paso-num">4</div>
+        <div class="paso-title" data-es="Entrega & Soporte" data-en="Delivery & Support">Entrega & Soporte</div>
+        <div class="paso-desc"
+             data-es="Implanto la solución, entreno a tu equipo y me aseguro de que todo funcione perfectamente."
+             data-en="I deploy the solution, train your team, and make sure everything works perfectly.">
+          Implanto la solución, entreno a tu equipo y me aseguro de que todo funcione perfectamente.
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</section>
+
+<!-- ===================== HABILIDADES ===================== -->
+<section id="habilidades" class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:60px">
+      <span class="label" data-es="Stack técnico" data-en="Tech stack">Stack técnico</span>
+      <h2 data-es="Las herramientas que uso<br>para construir tu solución." data-en="The tools I use<br>to build your solution.">
+        Las herramientas que uso<br>para construir tu solución.
+      </h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-title" data-es="Lenguajes & Backend" data-en="Languages & Backend">Lenguajes & Backend</div>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div><span class="skill-pct">95%</span></div>
+          <div class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+          <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+          <div class="skill-item"><span class="skill-name">Dart & Flutter</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-title" data-es="Frontend & Mobile" data-en="Frontend & Mobile">Frontend & Mobile</div>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">HTML5 / CSS3</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div><span class="skill-pct">95%</span></div>
+          <div class="skill-item"><span class="skill-name">Flutter (Móvil)</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div>
+          <div class="skill-item"><span class="skill-name">Diseño de APIs</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+          <div class="skill-item"><span class="skill-name">Bases de Datos</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:86%"></div></div><span class="skill-pct">86%</span></div>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-title" data-es="Automatización & DevOps" data-en="Automation & DevOps">Automatización & DevOps</div>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">RPA / Automatización</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div><span class="skill-pct">92%</span></div>
+          <div class="skill-item"><span class="skill-name">Web Scraping</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+          <div class="skill-item"><span class="skill-name">Git & GitHub</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+          <div class="skill-item"><span class="skill-name">Docker / Linux</span><div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH PILL CLOUD -->
+    <div class="tech-cloud reveal">
+      <div class="tech-cloud-label" data-es="Todas las tecnologías" data-en="All technologies">Todas las tecnologías</div>
+      <div class="tech-cloud-pills">
+        <span class="tech-cloud-pill">Python</span>
+        <span class="tech-cloud-pill">Dart &amp; Flutter</span>
+        <span class="tech-cloud-pill">SQL</span>
+        <span class="tech-cloud-pill">JavaScript</span>
+        <span class="tech-cloud-pill">HTML5</span>
+        <span class="tech-cloud-pill">CSS3</span>
+        <span class="tech-cloud-pill tech-cloud-pill--highlight" data-es="Automatización de Procesos (RPA)" data-en="Process Automation (RPA)">Automatización de Procesos (RPA)</span>
+        <span class="tech-cloud-pill">Web Scraping</span>
+        <span class="tech-cloud-pill" data-es="Análisis de Datos" data-en="Data Analysis">Análisis de Datos</span>
+        <span class="tech-cloud-pill" data-es="Desarrollo Móvil Multiplataforma" data-en="Cross-platform Mobile Dev">Desarrollo Móvil Multiplataforma</span>
+        <span class="tech-cloud-pill" data-es="Diseño de APIs" data-en="API Design">Diseño de APIs</span>
+        <span class="tech-cloud-pill" data-es="Gestión de Bases de Datos" data-en="Database Management">Gestión de Bases de Datos</span>
+        <span class="tech-cloud-pill">Linux</span>
+        <span class="tech-cloud-pill">Git &amp; GitHub</span>
+        <span class="tech-cloud-pill">Docker</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="label" style="justify-content:center"
+            data-es="¿Listo para automatizar?" data-en="Ready to automate?">¿Listo para automatizar?</span>
+      <h2 data-es="Deja de perder tiempo en tareas que una máquina puede hacer." data-en="Stop wasting time on tasks a machine can do.">
+        Deja de perder tiempo en tareas que una máquina puede hacer.
+      </h2>
+      <p class="cta-sub"
+         data-es="La primera sesión es gratuita. Analizamos tu proceso y definimos si hay una oportunidad de automatización. Sin compromisos."
+         data-en="The first session is free. We analyze your process and define if there's an automation opportunity. No commitments.">
+        La primera sesión es gratuita. Analizamos tu proceso y definimos si hay una oportunidad de automatización. Sin compromisos.
+      </p>
+      <div class="cta-actions">
+        <a href="#contacto" class="btn-primary"
+           data-es="Agendar sesión gratuita →" data-en="Book a free session →">
+          Agendar sesión gratuita →
+        </a>
+        <a href="mailto:rodyher15@gmail.com" class="btn-ghost"
+           data-es="Escribirme directo" data-en="Write to me directly">
+          Escribirme directo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="contacto-grid">
+
+      <!-- INFO -->
+      <div class="reveal">
+        <span class="label" data-es="Contacto" data-en="Contact">Contacto</span>
+        <h3 data-es="¿Tienes un proceso que automatizar?" data-en="Do you have a process to automate?">¿Tienes un proceso que automatizar?</h3>
+        <p data-es="Cuéntame qué pasa en tu negocio. En menos de 24 horas te respondo con mis primeras ideas y si podemos trabajar juntos."
+           data-en="Tell me what's happening in your business. In less than 24 hours I'll respond with my first ideas and whether we can work together.">
+          Cuéntame qué pasa en tu negocio. En menos de 24 horas te respondo con mis primeras ideas y si podemos trabajar juntos.
+        </p>
+        <div class="contact-items">
+
+          <a class="contact-item" href="mailto:rodyher15@gmail.com">
+            <div class="contact-item-icon">✉</div>
+            <div>
+              <div class="contact-item-label" data-es="Email" data-en="Email">Email</div>
+              <div class="contact-item-value">rodyher15@gmail.com</div>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://wa.me/51916199937" target="_blank" rel="noopener">
+            <div class="contact-item-icon">💬</div>
+            <div>
+              <div class="contact-item-label">WhatsApp</div>
+              <div class="contact-item-value">+51 916 199 937</div>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://linkedin.com/in/rodyher" target="_blank" rel="noopener">
+            <div class="contact-item-icon">in</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-value">linkedin.com/in/rodyher</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-card reveal reveal-delay-2">
+        <form id="contactForm" novalidate>
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value="437372e1-f89a-4616-89db-876ce1a5f1bb">
+          <input type="hidden" name="subject" value="Nuevo mensaje desde portafolio — Rodyher Viloria">
+          <input type="hidden" name="from_name" value="Portafolio Rodyher">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" data-es="Nombre" data-en="Name">Nombre</label>
+              <input class="form-input" type="text" name="name" placeholder="Tu nombre" required
+                     data-placeholder-es="Tu nombre" data-placeholder-en="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-es="Empresa" data-en="Company">Empresa</label>
+              <input class="form-input" type="text" name="company" placeholder="Nombre de tu empresa"
+                     data-placeholder-es="Nombre de tu empresa" data-placeholder-en="Your company name">
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" name="email" placeholder="tu@empresa.com" required
+                     data-placeholder-es="tu@empresa.com" data-placeholder-en="you@company.com">
+            </div>
+            <div class="form-group full">
+              <label class="form-label" data-es="¿Qué necesitas?" data-en="What do you need?">¿Qué necesitas?</label>
+              <select class="form-select form-input" name="service" required>
+                <option value="" disabled selected data-es="Selecciona un servicio" data-en="Select a service">Selecciona un servicio</option>
+                <option value="automatizacion" data-es="Automatización de procesos" data-en="Process automation">Automatización de procesos</option>
+                <option value="software"       data-es="Software a medida"          data-en="Custom software">Software a medida</option>
+                <option value="app"            data-es="App móvil"                  data-en="Mobile app">App móvil</option>
+                <option value="web"            data-es="Sitio web / sistema interno" data-en="Website / internal system">Sitio web / sistema interno</option>
+                <option value="consulta"       data-es="No sé aún, quiero orientación" data-en="Not sure yet, I need guidance">No sé aún, quiero orientación</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" data-es="Cuéntame tu situación" data-en="Tell me your situation">Cuéntame tu situación</label>
+              <textarea class="form-textarea" name="message" required
+                        placeholder="Describe brevemente qué procesos quieres mejorar o automatizar..."
+                        data-placeholder-es="Describe brevemente qué procesos quieres mejorar o automatizar..."
+                        data-placeholder-en="Briefly describe what processes you want to improve or automate..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-group form-submit">
+            <button type="submit" id="formSubmitBtn" class="btn-primary"
+                    style="width:100%;justify-content:center;font-size:15px;padding:16px"
+                    data-es="Enviar mensaje →" data-en="Send message →">
+              Enviar mensaje →
+            </button>
+          </div>
+          <p id="formStatus" style="text-align:center;margin-top:12px;font-size:13px;font-family:var(--font-mono);display:none"></p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          ✓ <span data-es="¡Mensaje enviado! Te respondo en menos de 24 horas." data-en="Message sent! I'll get back to you in less than 24 hours.">
+            ¡Mensaje enviado! Te respondo en menos de 24 horas.
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="logo" style="font-size:18px;margin-bottom:6px">Rodyher<span style="color:var(--violet-light)">.</span></div>
+      <div class="footer-copy" data-es="Arquitecto de Soluciones de Automatización" data-en="Automation Solutions Architect">
+        Arquitecto de Soluciones de Automatización
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#sobre-mi"  data-es="Sobre mí"  data-en="About">Sobre mí</a>
+      <a href="#casos"     data-es="Casos"      data-en="Cases">Casos</a>
+      <a href="#servicios" data-es="Servicios"  data-en="Services">Servicios</a>
+      <a href="#contacto"  data-es="Contacto"   data-en="Contact">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2025 Rodyher Viloria</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
