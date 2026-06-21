@@ -5,25 +5,28 @@
   Aquí puedes modificar la paleta de colores de todo el sitio.
   Simplemente cambia los valores de estas variables y la web
   se actualizará automáticamente.
+
+  Concepto: panel de control de un sistema de automatización.
+  Grafito casi negro + un único acento ámbar (estado "en línea")
+  y un verde de confirmación para resultados/éxito.
 */
 
 :root {
   /* Paleta de Colores Principal */
-  --color-background: #12121c; /* Fondo principal muy oscuro, casi negro azulado */
-  --color-surface: #1a1a2e;    /* Fondo para tarjetas y secciones, un poco más claro */
-  --color-primary: #e0e0e0;    /* Color de texto principal, blanco suave */
-  --color-secondary: #a0a0c0;  /* Color de texto secundario, para subtítulos y descripciones */
-  --color-border: #2a2a4a;     /* Color para bordes y separadores */
+  --color-background: #0B0D0C; /* Fondo principal, grafito casi negro */
+  --color-surface: #121513;    /* Fondo para tarjetas y paneles */
+  --color-primary: #E7E9E4;    /* Color de texto principal */
+  --color-secondary: #878F87;  /* Color de texto secundario */
+  --color-border: #242824;     /* Color para bordes y separadores */
 
-  /* Colores de Acento y Gradientes */
-  --color-accent-1: #8a4fff;   /* Un violeta vibrante para acentos */
-  --color-accent-2: #3d8bff;   /* Un azul brillante para acentos */
+  /* Colores de Acento */
+  --color-accent-1: #D9A441;   /* Ámbar de terminal — acento principal */
+  --color-accent-2: #5FAE7B;   /* Verde de confirmación / resultados */
 
-  /* Gradiente para textos y elementos destacados */
-  --gradient-text: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-2));
+  /* Gradiente para textos y elementos destacados (uso mínimo, deliberado) */
+  --gradient-text: linear-gradient(100deg, var(--color-accent-1), #C97A3D);
 
   /* Colores para Interacción */
-  --color-button-hover: #ffffff;
-  --color-text-button-hover: #12121c;
+  --color-button-hover: #F0C674;
+  --color-text-button-hover: #0B0D0C;
 }
-
