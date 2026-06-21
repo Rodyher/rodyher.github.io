@@ -1169,7 +1169,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   /* Nav: hide desktop links, show lang toggle + hamburger */
   .nav-links { display: none; }
-  .availability { display: none; }
+  /* Availability badge stays visible but compact: dot only, no label */
+  .availability { padding: 7px; gap: 0; }
+  .availability span:not(.dot) { display: none; }
   /* lang-toggle STAYS visible on mobile — remove the old hide rule */
   .lang-toggle { display: flex; }
   .hamburger { display: flex; }
